@@ -1,5 +1,5 @@
 requirejs.config({
-   urlArgs: "bust=v" + "${timestamp}",
+   urlArgs: "bust=v1" ,
    //By default load any module IDs from js/lib
    baseUrl: './',
    // alias libraries paths

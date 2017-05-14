@@ -113,9 +113,9 @@ define(['angularAMD', 'default-routers', 'default-config',
          }
       }
 
-      app.config(['$provide', '$stateProvider', '$urlRouterProvider', '$httpProvider', '$controllerProvider',
-         function ($provide, $stateProvider, $urlRouterProvider, $httpProvider, $controllerProvider) {
-
+      app.config(['$qProvider','$provide', '$stateProvider', '$urlRouterProvider', '$httpProvider', '$controllerProvider',
+         function ($qProvider,$provide, $stateProvider, $urlRouterProvider, $httpProvider, $controllerProvider) {
+            $qProvider.errorOnUnhandledRejections(false);
             // 注册消息机制
             $provide.decorator('$rootScope', ['$delegate', function ($delegate) {
 
