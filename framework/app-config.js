@@ -1,5 +1,5 @@
 requirejs.config({
-   urlArgs: "bust=v1" ,
+   urlArgs: "bust=v1",
    //By default load any module IDs from js/lib
    baseUrl: './',
    // alias libraries paths
@@ -26,8 +26,7 @@ requirejs.config({
       'angular-sanitize': "node_modules/angular-sanitize/angular-sanitize",
       'jquery': "node_modules/jquery/dist/jquery",
 
-      'default-config':'configs/default-config',
-      'modules-config':'configs/modules',
+      'default-config':'configs/modules',
       "default-routers":'routers/routers',
 
       //Main App
@@ -47,7 +46,6 @@ requirejs.config({
       "ui-bootstrap": ["angular"],
       "angular-animate": ["angular"],
       "angular-sanitize": ["angular"],
-      "default-config":['modules-config']
    },
    deps: ['app']
 });

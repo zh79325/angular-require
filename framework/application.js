@@ -1,9 +1,9 @@
-define(['angularAMD', 'default-routers', 'default-config',
+define(['angularAMD', 'default-routers',
       "basic-tool", "angular", 'ui-router',
       'angular-animate', 'angular-sanitize',
       'app-ui-view'
    ],
-   function (angularAMD, routers, configs, $tools) {
+   function (angularAMD, routers, $tools) {
       var app = angular.module('application', ['ui.router', 'ngAnimate', 'ngSanitize','application.core']);
 
       var loadFiles = function (folder, files, success) {
@@ -115,7 +115,7 @@ define(['angularAMD', 'default-routers', 'default-config',
 
       app.config(['$qProvider','$provide', '$stateProvider', '$urlRouterProvider', '$httpProvider', '$controllerProvider',
          function ($qProvider,$provide, $stateProvider, $urlRouterProvider, $httpProvider, $controllerProvider) {
-            $qProvider.errorOnUnhandledRejections(false);
+             $qProvider.errorOnUnhandledRejections(false);
             // 注册消息机制
             $provide.decorator('$rootScope', ['$delegate', function ($delegate) {
 
