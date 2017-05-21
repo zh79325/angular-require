@@ -149,16 +149,14 @@ define(['angularAMD', 'default-routers',
 
 
       app.controller('$ApplicationBaseCtrl',
-         function ($scope, $rootScope, $http, $window, $state) {
-
-            $rootScope.$on('$stateChangeSuccess',
-               function (event, toState, toParams, fromState, fromParams) {
-                  console.log(toState);
+         function ($scope, $rootScope, $http, $window, $state, $transitions) {
+            $transitions.onSuccess({},
+               function (trans) {
+                    $scope.current = trans.targetState().state();
+                  console.log($scope.current);
                });
-            $rootScope.$on('$stateChangeStart',
-               function (event, toState, toParams, fromState, fromParams) {
-                  console.log(toState);
-               });
+            $transitions.onStart('TransitionService.onStart ',
+               function (trans) {});
          });
 
 
